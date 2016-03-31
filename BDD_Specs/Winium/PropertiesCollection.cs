@@ -15,6 +15,8 @@ namespace BDD_Specs.Winium
 {
     public static class PropertiesCollection
     {
+        private static string _emulator = "Mobile Emulator 10.0.10586.0 WVGA 4 inch 512MB";
+
         private static BasePageObject _currentPage;
         public static BasePageObject CurrentPage
         {
@@ -28,7 +30,7 @@ namespace BDD_Specs.Winium
 
         //private static string path = @"C:\Users\jpedretti\Source\Repos\wp-tokpag\Itau.WinRT.Mobile.Tokpag\Itau.WinRT.Mobile.Tokpag\Itau.WinRT.Mobile.Tokpag\AppPackages\Itau.WinRT.Mobile.Tokpag_1.0.0.0_AnyCPU_Debug_Test\Itau.WinRT.Mobile.Tokpag_1.0.0.0_AnyCPU_Debug.appx";
 
-        private static string path = @"D:\Projects\BDD_UniversalApp\BDD_UniversalApp\AppPackages\BDD_UniversalApp_1.0.3.0_x86_Debug_Test\BDD_UniversalApp_1.0.3.0_x86_Debug.appx";
+        private static string path = @"D:\Projects\BDD_UniversalApp\BDD_UniversalApp\AppPackages\BDD_UniversalApp_1.0.5.0_x64_Debug_Test\BDD_UniversalApp_1.0.5.0_x64_Debug.appx";
 
         private static DesiredCapabilities _desiredCapabilities;
 
@@ -40,7 +42,7 @@ namespace BDD_Specs.Winium
                 {
                     _desiredCapabilities = new DesiredCapabilities();
                     _desiredCapabilities.SetCapability("app", path);
-                    _desiredCapabilities.SetCapability("deviceName", "Emulator 10.0.10586.0");
+                    _desiredCapabilities.SetCapability("deviceName", _emulator);
                 }
                 return _desiredCapabilities;
             }
@@ -109,7 +111,7 @@ namespace BDD_Specs.Winium
         {
             _desiredCapabilities = new DesiredCapabilities();
             _desiredCapabilities.SetCapability("app", path);
-            _desiredCapabilities.SetCapability("deviceName", "Emulator 10.0.10586.0");
+            _desiredCapabilities.SetCapability("deviceName", _emulator);
 
             return new WpDriver(new Uri("http://localhost:9999"), _desiredCapabilities);
         }

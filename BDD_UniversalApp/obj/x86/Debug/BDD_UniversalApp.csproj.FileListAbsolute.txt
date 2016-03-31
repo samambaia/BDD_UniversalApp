@@ -196,3 +196,4 @@ D:\Projects\BDD_UniversalApp\BDD_UniversalApp\obj\x86\Debug\qualifiers.txt
 D:\Projects\BDD_UniversalApp\BDD_UniversalApp\obj\x86\Debug\qualifiers.txt.intermediate
 D:\Projects\BDD_UniversalApp\BDD_UniversalApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Projects\BDD_UniversalApp\BDD_UniversalApp\obj\x86\Debug\ProjectArchitectures.txt
+D:\Projects\BDD_UniversalApp\BDD_UniversalApp\obj\x86\Debug\BDD_UniversalApp.csprojResolveAssemblyReference.cache
