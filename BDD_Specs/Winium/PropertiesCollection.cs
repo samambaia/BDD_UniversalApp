@@ -28,9 +28,7 @@ namespace BDD_Specs.Winium
             }
         }
 
-        //private static string path = @"C:\Users\jpedretti\Source\Repos\wp-tokpag\Itau.WinRT.Mobile.Tokpag\Itau.WinRT.Mobile.Tokpag\Itau.WinRT.Mobile.Tokpag\AppPackages\Itau.WinRT.Mobile.Tokpag_1.0.0.0_AnyCPU_Debug_Test\Itau.WinRT.Mobile.Tokpag_1.0.0.0_AnyCPU_Debug.appx";
-
-        private static string path = @"D:\Projects\BDD_UniversalApp\BDD_UniversalApp\AppPackages\BDD_UniversalApp_1.0.5.0_x64_Debug_Test\BDD_UniversalApp_1.0.5.0_x64_Debug.appx";
+        private static string path = @"D:\Projects\BDD_UniversalApp\BDD_UniversalApp\AppPackages\BDD_UniversalApp_1.0.0.0_x86_Debug_Test\BDD_UniversalApp_1.0.0.0_x86_Debug.appx";
 
         private static DesiredCapabilities _desiredCapabilities;
 

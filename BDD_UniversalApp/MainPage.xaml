@@ -5,15 +5,23 @@
     xmlns:local="using:BDD_UniversalApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded">
+    mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+          AutomationProperties.AutomationId="Main">
 
         <StackPanel HorizontalAlignment="center"
                     VerticalAlignment="Center">
-            <TextBox x:Name="txbName" Header="Nome" Width="200" HorizontalAlignment="Center"
-                 VerticalAlignment="Center"/>
-            <Button x:Name="btnClickme" Content="Click me" HorizontalAlignment="Center" Margin="10" Click="btnClickme_Click"/>
+            <TextBox x:Name="txbName" AutomationProperties.AutomationId="txbName"
+                     Header="Nome" 
+                     Width="200" 
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center" />
+            <Button x:Name="btnClickme" AutomationProperties.AutomationId="btnClickme"
+                    Content="Click me" 
+                    HorizontalAlignment="Center" 
+                    Margin="10" 
+                    Click="btnClickme_Click"/>
         </StackPanel>
        
     </Grid>

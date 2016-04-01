@@ -1,14 +1,21 @@
-﻿using BDD_Specs.Winium;
-using System;
+﻿using System;
 using TechTalk.SpecFlow;
+using BDD_Specs.Winium;
+using BDD_Specs.PageObjects;
 
 namespace BDD_Specs
 {
     [Binding]
-    public class ClickmeSteps
+    public class ClickmeSteps : BaseSteps
     {
-        [Given(@"Que eu estou na tela de ""(.*)""")]
-        public void DadoQueEuEstouNaTelaDe(string p0)
+        [Given(@"Que eu abro a aplicação")]
+        public void DadoQueEuAbroAAplicacao()
+        {
+            PropertiesCollection.CurrentPage = new MainPageObject();
+        }
+
+        [Given(@"Eu estou na tela de ""(.*)""")]
+        public void DadoEuEstouNaTelaDe(string p0)
         {
             if (!DriverMethods.IsInPage(p0))
             {
@@ -26,11 +33,18 @@ namespace BDD_Specs
         [Then(@"Devo preencher o campo ""(.*)"" com o valor ""(.*)""")]
         public void EntaoDevoPreencherOCampoComOValor(string p0, string p1)
         {
+            DriverMethods.WaitFor(400);
             var elementId = PropertiesCollection.CurrentPage.FindControlId(p0);
             var element = PropertiesCollection.Driver.FindElementById(elementId);
 
             element.SendKeys(p1);
         }
 
+        [BeforeScenario]
+        [Then(@"Devo sair da aplicação")]
+        public void EntaoDevoSairDaAplicacao()
+        {
+            PropertiesCollection.QuitApp();
+        }
     }
 }

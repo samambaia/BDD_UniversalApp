@@ -28,14 +28,14 @@ namespace BDD_UniversalApp
             this.InitializeComponent();
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            AutomationServer.Instance.InitializeAndStart();
-        }
+        //private void Page_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    AutomationServer.Instance.InitializeAndStart();
+        //}
 
         private void btnClickme_Click(object sender, RoutedEventArgs e)
         {
-            txbName.Text = btnClickme.Content + " Clicou em Mim";
+            txbName.Text = "Você Clicou em Mim";
         }
     }
 }

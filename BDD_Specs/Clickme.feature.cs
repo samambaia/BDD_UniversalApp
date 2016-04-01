@@ -66,18 +66,22 @@ namespace BDD_Specs
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Abro a tela e clico no botão")]
-        public virtual void AbroATelaEClicoNoBotao()
+        [NUnit.Framework.DescriptionAttribute("Abro a tela e clico no botão e preencho o textbox com um valor")]
+        public virtual void AbroATelaEClicoNoBotaoEPreenchoOTextboxComUmValor()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Abro a tela e clico no botão", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Abro a tela e clico no botão e preencho o textbox com um valor", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given("Que eu estou na tela de \"Main\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+ testRunner.Given("Que eu abro a aplicação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line 8
- testRunner.When("Eu pressiono o botão \"btnClickme\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+ testRunner.And("Eu estou na tela de \"Main\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line 9
- testRunner.Then("Devo preencher o campo \"txbName\" com o valor \"Você me Clicou\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+ testRunner.When("Eu pressiono o botão \"btnClickme\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line 10
+ testRunner.Then("Devo preencher o campo \"txbName\" com o valor \"Você Clicou em Mim\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+#line 11
+ testRunner.Then("Devo sair da aplicação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line hidden
             this.ScenarioCleanup();
         }
