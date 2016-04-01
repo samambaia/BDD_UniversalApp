@@ -469,3 +469,4 @@ BDD_UniversalApp/obj/x86/Release/qualifiers.txt.intermediate
 BDD_UniversalApp/obj/x86/Release/resources.resfiles
 BDD_UniversalApp/obj/x86/Release/resources.resfiles.intermediate
 *.html
+BDD_UniversalApp/AppPackages/
