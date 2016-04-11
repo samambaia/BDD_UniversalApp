@@ -1,21 +1,21 @@
-﻿using System;
-using TechTalk.SpecFlow;
+﻿using BDD_Specs.PageObjects;
 using BDD_Specs.Winium;
-using BDD_Specs.PageObjects;
+using System;
+using TechTalk.SpecFlow;
 
 namespace BDD_Specs
 {
     [Binding]
-    public class ClickmeSteps : BaseSteps
+    public class ClickmeSteps
     {
         [Given(@"Que eu abro a aplicação")]
         public void DadoQueEuAbroAAplicacao()
         {
             PropertiesCollection.CurrentPage = new MainPageObject();
         }
-
-        [Given(@"Eu estou na tela de ""(.*)""")]
-        public void DadoEuEstouNaTelaDe(string p0)
+        
+        [Given(@"Estou na tela de ""(.*)""")]
+        public void DadoEstouNaTelaDe(string p0)
         {
             if (!DriverMethods.IsInPage(p0))
             {
@@ -30,8 +30,8 @@ namespace BDD_Specs
             PropertiesCollection.CurrentPage.Clicar(p0);
         }
 
-        [Then(@"Devo preencher o campo ""(.*)"" com o valor ""(.*)""")]
-        public void EntaoDevoPreencherOCampoComOValor(string p0, string p1)
+        [When(@"Preencho o campo ""(.*)"" com o valor ""(.*)""")]
+        public void QuandoPreenchoOCampoComOValor(string p0, string p1)
         {
             DriverMethods.WaitFor(400);
             var elementId = PropertiesCollection.CurrentPage.FindControlId(p0);
@@ -40,11 +40,17 @@ namespace BDD_Specs
             element.SendKeys(p1);
         }
 
-        [BeforeScenario]
-        [Then(@"Devo sair da aplicação")]
-        public void EntaoDevoSairDaAplicacao()
+        [Then(@"o campo ""(.*)"" deve ter o valor """"(.*)""")]
+        public void EntaoOCampoDeveTerOValor(string p0, string p1)
         {
-            PropertiesCollection.QuitApp();
+            DriverMethods.WaitFor(400);
+            var elementId = PropertiesCollection.CurrentPage.FindControlId(p0);
+            var element = PropertiesCollection.Driver.FindElementById(elementId);
+            
+            if (element.Text == p1)
+            {
+                throw new FormatException();
+            }
         }
     }
 }

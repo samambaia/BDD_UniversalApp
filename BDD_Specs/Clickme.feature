@@ -5,7 +5,7 @@ Funcionalidade: Clickme
 
 Cenário: Abro a tela e clico no botão e preencho o textbox com um valor
 	Dado Que eu abro a aplicação
-	E Eu estou na tela de "Main"
+	E Estou na tela de "Main"
 	Quando Eu pressiono o botão "btnClickme"
-	Então Devo preencher o campo "txbName" com o valor "Você Clicou em Mim"
-	Então Devo sair da aplicação
+	E Preencho o campo "txbName" com o valor "Você Clicou em Mim"
+	Então o campo "txbName" deve ter o valor ""Você Clicou em Mim"

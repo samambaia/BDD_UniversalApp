@@ -33,7 +33,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
             <remarks>
@@ -66,7 +66,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
             <remarks>
@@ -128,8 +128,8 @@
             A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.ObjectAssertionsExtensions.BeBinarySerializable``1(FluentAssertions.Primitives.ObjectAssertions,System.Func{FluentAssertions.Equivalency.EquivalencyAssertionOptions{``0},FluentAssertions.Equivalency.EquivalencyAssertionOptions{``0}},System.String,System.Object[])">
@@ -141,8 +141,8 @@
             A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.ObjectAssertionsExtensions.BeXmlSerializable(FluentAssertions.Primitives.ObjectAssertions,System.String,System.Object[])">
@@ -154,9 +154,529 @@
             A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
+        </member>
+        <member name="T:FluentAssertions.Xml.XmlNodeAssertions">
+            <summary>
+            Contains a number of methods to assert that an <see cref="T:System.Xml.XmlNode"/> is in the expected state.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Xml.XmlNodeAssertions.BeEquivalentTo(System.Xml.XmlNode)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.XmlNode"/> is equivalent to the <paramref name="expected"/> element.
+            </summary>
+            <param name="expected">The expected element</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XmlNodeAssertions.BeEquivalentTo(System.Xml.XmlNode,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.XmlNode"/> is equivalent to the <paramref name="expected"/> node.
+            </summary>
+            <param name="expected">The expected node</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="reasonArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XmlNodeAssertions.NotBeEquivalentTo(System.Xml.XmlNode)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.XmlNode"/> is not equivalent to
+            the <paramref name="unexpected"/> node.
+            </summary>
+            <param name="unexpected">The unexpected node</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XmlNodeAssertions.NotBeEquivalentTo(System.Xml.XmlNode,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.XmlNode"/> is not equivalent to
+            the <paramref name="unexpected"/> node.
+            </summary>
+            <param name="unexpected">The unexpected node</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="reasonArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+            <returns></returns>
+        </member>
+        <member name="P:FluentAssertions.Xml.XmlNodeAssertions.Context">
+            <summary>
+            Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="T:FluentAssertions.Xml.XAttributeAssertions">
+            <summary>
+            Contains a number of methods to assert that an <see cref="T:System.Xml.Linq.XAttribute"/> is in the expected state.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Xml.XAttributeAssertions.#ctor(System.Xml.Linq.XAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentAssertions.Xml.XAttributeAssertions" /> class.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Xml.XAttributeAssertions.Be(System.Xml.Linq.XAttribute)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> equals the <paramref name="expected"/> attribute.
+            </summary>
+            <param name="expected">The expected attribute</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XAttributeAssertions.Be(System.Xml.Linq.XAttribute,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> equals the <paramref name="expected"/> attribute.
+            </summary>
+            <param name="expected">The expected attribute</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XAttributeAssertions.NotBe(System.Xml.Linq.XAttribute)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> does not equal the <paramref name="unexpected"/> attribute,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected attribute</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XAttributeAssertions.NotBe(System.Xml.Linq.XAttribute,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> does not equal the <paramref name="unexpected"/> attribute,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected attribute</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XAttributeAssertions.HaveValue(System.String)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> has the specified <paramref name="expected"/> value.
+            </summary>
+            <param name="expected">The expected value</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XAttributeAssertions.HaveValue(System.String,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> has the specified <paramref name="expected"/> value.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="P:FluentAssertions.Xml.XAttributeAssertions.Context">
+            <summary>
+            Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="T:FluentAssertions.Xml.XDocumentAssertions">
+            <summary>
+            Contains a number of methods to assert that an <see cref="T:System.Xml.Linq.XDocument"/> is in the expected state.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.#ctor(System.Xml.Linq.XDocument)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentAssertions.Xml.XDocumentAssertions" /> class.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.Be(System.Xml.Linq.XDocument)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> equals the <paramref name="expected"/> document,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="expected">The expected document</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.Be(System.Xml.Linq.XDocument,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> equals the <paramref name="expected"/> document,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="expected">The expected document</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBe(System.Xml.Linq.XDocument)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> does not equal the <paramref name="unexpected"/> document,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected document</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBe(System.Xml.Linq.XDocument,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> does not equal the <paramref name="unexpected"/> document,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected document</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.BeEquivalentTo(System.Xml.Linq.XDocument)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is equivalent to the <paramref name="expected"/> document,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="expected">The expected document</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.BeEquivalentTo(System.Xml.Linq.XDocument,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is equivalent to the <paramref name="expected"/> document,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="expected">The expected document</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBeEquivalentTo(System.Xml.Linq.XDocument)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is not equivalent to the <paramref name="unexpected"/> document,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected document</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBeEquivalentTo(System.Xml.Linq.XDocument,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is not equivalent to the <paramref name="unexpected"/> document,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected document</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.String)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The name of the expected root element of the current document.</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.Xml.Linq.XName)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The name of the expected root element of the current document.</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.String,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The name of the expected root element of the current document.</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.Xml.Linq.XName,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The full name <see cref="T:System.Xml.Linq.XName"/> of the expected root element of the current document.</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.String)">
+            <summary>
+            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
+            child element with the specified <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">
+            The name of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.Xml.Linq.XName)">
+            <summary>
+            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
+            child element with the specified <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">
+            The full name <see cref="T:System.Xml.Linq.XName"/> of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.String,System.String,System.Object[])">
+            <summary>
+            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
+            child element with the specified <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">
+            The name of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
+            </param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.Xml.Linq.XName,System.String,System.Object[])">
+            <summary>
+            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
+            child element with the specified <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">
+            The full name <see cref="T:System.Xml.Linq.XName"/> of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
+            </param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="P:FluentAssertions.Xml.XDocumentAssertions.Context">
+            <summary>
+            Returns the type of the subject the assertion applies on.
+            </summary>
+        </member>
+        <member name="T:FluentAssertions.Xml.XElementAssertions">
+            <summary>
+            Contains a number of methods to assert that an <see cref="T:System.Xml.Linq.XElement"/> is in the expected state.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.#ctor(System.Xml.Linq.XElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FluentAssertions.Xml.XElementAssertions" /> class.
+            </summary>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.Be(System.Xml.Linq.XElement)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> equals the <paramref name="expected"/> element.
+            </summary>
+            <param name="expected">The expected element</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.Be(System.Xml.Linq.XElement,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> equals the <paramref name="expected"/> element.
+            </summary>
+            <param name="expected">The expected element</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBe(System.Xml.Linq.XElement)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> does not equal the <paramref name="unexpected"/> element,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected element</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBe(System.Xml.Linq.XElement,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> does not equal the <paramref name="unexpected"/> element,
+            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected element</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.BeEquivalentTo(System.Xml.Linq.XElement)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is equivalent to the <paramref name="expected"/> element,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="expected">The expected element</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.BeEquivalentTo(System.Xml.Linq.XElement,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is equivalent to the <paramref name="expected"/> element,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="expected">The expected element</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBeEquivalentTo(System.Xml.Linq.XElement)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is not equivalent to the <paramref name="unexpected"/> element,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected element</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBeEquivalentTo(System.Xml.Linq.XElement,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is not equivalent to the <paramref name="unexpected"/> element,
+            using its <see cref="!:XNode.DeepEquals()" /> implementation.
+            </summary>
+            <param name="unexpected">The unexpected element</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveValue(System.String)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has the specified <paramref name="expected"/> value.
+            </summary>
+            <param name="expected">The expected value</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveValue(System.String,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has the specified <paramref name="expected"/> value.
+            </summary>
+            <param name="expected">The expected value</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.String,System.String)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
+            and <paramref name="expectedValue"/>.
+            </summary>
+            <param name="expectedName">The name of the expected attribute</param>
+            <param name="expectedValue">The value of the expected attribute</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.Xml.Linq.XName,System.String)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
+            and <paramref name="expectedValue"/>.
+            </summary>
+            <param name="expectedName">The name <see cref="T:System.Xml.Linq.XName"/> of the expected attribute</param>
+            <param name="expectedValue">The value of the expected attribute</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
+            and <paramref name="expectedValue"/>.
+            </summary>
+            <param name="expectedName">The name of the expected attribute</param>
+            <param name="expectedValue">The value of the expected attribute</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.Xml.Linq.XName,System.String,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
+            and <paramref name="expectedValue"/>.
+            </summary>
+            <param name="expectedName">The name <see cref="T:System.Xml.Linq.XName"/> of the expected attribute</param>
+            <param name="expectedValue">The value of the expected attribute</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.String)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The name of the expected child element</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.Xml.Linq.XName)">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The name <see cref="T:System.Xml.Linq.XName"/> of the expected child element</param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.String,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The name <see cref="T:System.Xml.Linq.XName"/> of the expected child element</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.Xml.Linq.XName,System.String,System.Object[])">
+            <summary>
+            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
+            <paramref name="expected"/> name.
+            </summary>
+            <param name="expected">The name <see cref="T:System.Xml.Linq.XName"/> of the expected child element</param>
+            <param name="because">
+            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
+            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
+            </param>
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
+            </param>
+        </member>
+        <member name="P:FluentAssertions.Xml.XElementAssertions.Context">
+            <summary>
+            Returns the type of the subject the assertion applies on.
+            </summary>
         </member>
         <member name="T:FluentAssertions.AssertionExtensions">
             <summary>
@@ -175,7 +695,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
             <returns>
@@ -194,7 +714,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
             <returns>
@@ -213,7 +733,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
             <returns>
@@ -232,7 +752,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
         </member>
@@ -245,7 +765,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
         </member>
@@ -261,7 +781,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
             <returns>
@@ -280,7 +800,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
         </member>
@@ -293,7 +813,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
         </member>
@@ -605,8 +1125,8 @@
             An optional formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the 
             assertion is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.AssertionExtensions.ShouldAllBeEquivalentTo``1(System.Collections.Generic.IEnumerable{``0},System.Collections.IEnumerable,System.Func{FluentAssertions.Equivalency.EquivalencyAssertionOptions{``0},FluentAssertions.Equivalency.EquivalencyAssertionOptions{``0}},System.String,System.Object[])">
@@ -630,8 +1150,8 @@
             An optional formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the 
             assertion is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.AssertionExtensions.ShouldBeEquivalentTo``1(``0,System.Object,System.String,System.Object[])">
@@ -649,8 +1169,8 @@
             An optional formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the 
             assertion is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.AssertionExtensions.ShouldBeEquivalentTo``1(``0,System.Object,System.Func{FluentAssertions.Equivalency.EquivalencyAssertionOptions{``0},FluentAssertions.Equivalency.EquivalencyAssertionOptions{``0}},System.String,System.Object[])">
@@ -673,8 +1193,8 @@
             An optional formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the 
             assertion is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.AssertionExtensions.MonitorEvents(System.Object)">
@@ -836,8 +1356,8 @@
             A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.Reflection.AssemblyAssertions.Reference(System.Reflection.Assembly)">
@@ -855,8 +1375,8 @@
             A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
             is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
             </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:reason" />.
+            <param name="becauseArgs">
+            Zero or more objects to format using the placeholders in <see cref="!:because" />.
             </param>
         </member>
         <member name="M:FluentAssertions.Reflection.AssemblyAssertions.DefineType(System.String,System.String,System.String,System.Object[])">
@@ -867,7 +1387,7 @@
             <param name="name">The name of the class.</param>
             <param name="because">A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])"/> explaining why the assertion
                         is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.</param>
-            <param name="reasonArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
+            <param name="becauseArgs">Zero or more objects to format using the placeholders in <see cref="!:because"/>.</param>
         </member>
         <member name="T:FluentAssertions.Specialized.ExecutionTimeAssertions">
             <summary>
@@ -891,7 +1411,7 @@
             A formatted phrase explaining why the assertion should be satisfied. If the phrase does not 
             start with the word <i>because</i>, it is prepended to the message.
             </param>
-            <param name="reasonArgs">
+            <param name="becauseArgs">
             Zero or more values to use for filling in any <see cref="M:System.String.Format(System.String,System.Object[])"/> compatible placeholders.
             </param>
         </member>
@@ -907,475 +1427,6 @@
             </summary>
             <param name="subject">The object that exposes the method or property.</param>
             <param name="action">A reference to the method or property to measure the execution time of.</param>
-        </member>
-        <member name="T:FluentAssertions.Xml.XAttributeAssertions">
-            <summary>
-            Contains a number of methods to assert that an <see cref="T:System.Xml.Linq.XAttribute"/> is in the expected state.
-            </summary>
-        </member>
-        <member name="M:FluentAssertions.Xml.XAttributeAssertions.#ctor(System.Xml.Linq.XAttribute)">
-            <summary>
-            Initializes a new instance of the <see cref="T:FluentAssertions.Xml.XAttributeAssertions" /> class.
-            </summary>
-        </member>
-        <member name="M:FluentAssertions.Xml.XAttributeAssertions.Be(System.Xml.Linq.XAttribute)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> equals the <paramref name="expected"/> attribute.
-            </summary>
-            <param name="expected">The expected attribute</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XAttributeAssertions.Be(System.Xml.Linq.XAttribute,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> equals the <paramref name="expected"/> attribute.
-            </summary>
-            <param name="expected">The expected attribute</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XAttributeAssertions.NotBe(System.Xml.Linq.XAttribute)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> does not equal the <paramref name="unexpected"/> attribute,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected attribute</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XAttributeAssertions.NotBe(System.Xml.Linq.XAttribute,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> does not equal the <paramref name="unexpected"/> attribute,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected attribute</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XAttributeAssertions.HaveValue(System.String)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> has the specified <paramref name="expected"/> value.
-            </summary>
-            <param name="expected">The expected value</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XAttributeAssertions.HaveValue(System.String,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XAttribute"/> has the specified <paramref name="expected"/> value.
-            </summary>
-            <param name="expected">The expected value</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="P:FluentAssertions.Xml.XAttributeAssertions.Context">
-            <summary>
-            Returns the type of the subject the assertion applies on.
-            </summary>
-        </member>
-        <member name="T:FluentAssertions.Xml.XDocumentAssertions">
-            <summary>
-            Contains a number of methods to assert that an <see cref="T:System.Xml.Linq.XDocument"/> is in the expected state.
-            </summary>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.#ctor(System.Xml.Linq.XDocument)">
-            <summary>
-            Initializes a new instance of the <see cref="T:FluentAssertions.Xml.XDocumentAssertions" /> class.
-            </summary>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.Be(System.Xml.Linq.XDocument)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> equals the <paramref name="expected"/> document,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="expected">The expected document</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.Be(System.Xml.Linq.XDocument,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> equals the <paramref name="expected"/> document,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="expected">The expected document</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBe(System.Xml.Linq.XDocument)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> does not equal the <paramref name="unexpected"/> document,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected document</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBe(System.Xml.Linq.XDocument,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> does not equal the <paramref name="unexpected"/> document,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected document</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.BeEquivalentTo(System.Xml.Linq.XDocument)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is equivalent to the <paramref name="expected"/> document,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="expected">The expected document</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.BeEquivalentTo(System.Xml.Linq.XDocument,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is equivalent to the <paramref name="expected"/> document,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="expected">The expected document</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBeEquivalentTo(System.Xml.Linq.XDocument)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is not equivalent to the <paramref name="unexpected"/> document,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected document</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.NotBeEquivalentTo(System.Xml.Linq.XDocument,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> is not equivalent to the <paramref name="unexpected"/> document,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected document</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.String)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The name of the expected root element of the current document.</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.Xml.Linq.XName)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The name of the expected root element of the current document.</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.String,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The name of the expected root element of the current document.</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveRoot(System.Xml.Linq.XName,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XDocument"/> has a root element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The full name <see cref="T:System.Xml.Linq.XName"/> of the expected root element of the current document.</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.String)">
-            <summary>
-            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
-            child element with the specified <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">
-            The name of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.Xml.Linq.XName)">
-            <summary>
-            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
-            child element with the specified <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">
-            The full name <see cref="T:System.Xml.Linq.XName"/> of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.String,System.String,System.Object[])">
-            <summary>
-            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
-            child element with the specified <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">
-            The name of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
-            </param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XDocumentAssertions.HaveElement(System.Xml.Linq.XName,System.String,System.Object[])">
-            <summary>
-            Asserts that the <see cref="P:System.Xml.Linq.XDocument.Root"/> element of the current <see cref="T:System.Xml.Linq.XDocument"/> has a direct
-            child element with the specified <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">
-            The full name <see cref="T:System.Xml.Linq.XName"/> of the expected child element of the current document's Root <see cref="P:System.Xml.Linq.XDocument.Root"/> element.
-            </param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="P:FluentAssertions.Xml.XDocumentAssertions.Context">
-            <summary>
-            Returns the type of the subject the assertion applies on.
-            </summary>
-        </member>
-        <member name="T:FluentAssertions.Xml.XElementAssertions">
-            <summary>
-            Contains a number of methods to assert that an <see cref="T:System.Xml.Linq.XElement"/> is in the expected state.
-            </summary>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.#ctor(System.Xml.Linq.XElement)">
-            <summary>
-            Initializes a new instance of the <see cref="T:FluentAssertions.Xml.XElementAssertions" /> class.
-            </summary>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.Be(System.Xml.Linq.XElement)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> equals the <paramref name="expected"/> element.
-            </summary>
-            <param name="expected">The expected element</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.Be(System.Xml.Linq.XElement,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> equals the <paramref name="expected"/> element.
-            </summary>
-            <param name="expected">The expected element</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBe(System.Xml.Linq.XElement)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> does not equal the <paramref name="unexpected"/> element,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected element</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBe(System.Xml.Linq.XElement,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> does not equal the <paramref name="unexpected"/> element,
-            using its <see cref="M:System.Object.Equals(System.Object)" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected element</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.BeEquivalentTo(System.Xml.Linq.XElement)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is equivalent to the <paramref name="expected"/> element,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="expected">The expected element</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.BeEquivalentTo(System.Xml.Linq.XElement,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is equivalent to the <paramref name="expected"/> element,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="expected">The expected element</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBeEquivalentTo(System.Xml.Linq.XElement)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is not equivalent to the <paramref name="unexpected"/> element,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected element</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.NotBeEquivalentTo(System.Xml.Linq.XElement,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> is not equivalent to the <paramref name="unexpected"/> element,
-            using its <see cref="!:XNode.DeepEquals()" /> implementation.
-            </summary>
-            <param name="unexpected">The unexpected element</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveValue(System.String)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has the specified <paramref name="expected"/> value.
-            </summary>
-            <param name="expected">The expected value</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveValue(System.String,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has the specified <paramref name="expected"/> value.
-            </summary>
-            <param name="expected">The expected value</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.String,System.String)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
-            and <paramref name="expectedValue"/>.
-            </summary>
-            <param name="expectedName">The name of the expected attribute</param>
-            <param name="expectedValue">The value of the expected attribute</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.Xml.Linq.XName,System.String)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
-            and <paramref name="expectedValue"/>.
-            </summary>
-            <param name="expectedName">The name <see cref="T:System.Xml.Linq.XName"/> of the expected attribute</param>
-            <param name="expectedValue">The value of the expected attribute</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.String,System.String,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
-            and <paramref name="expectedValue"/>.
-            </summary>
-            <param name="expectedName">The name of the expected attribute</param>
-            <param name="expectedValue">The value of the expected attribute</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveAttribute(System.Xml.Linq.XName,System.String,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has an attribute with the specified <paramref name="expectedName"/>
-            and <paramref name="expectedValue"/>.
-            </summary>
-            <param name="expectedName">The name <see cref="T:System.Xml.Linq.XName"/> of the expected attribute</param>
-            <param name="expectedValue">The value of the expected attribute</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.String)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The name of the expected child element</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.Xml.Linq.XName)">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The name <see cref="T:System.Xml.Linq.XName"/> of the expected child element</param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.String,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The name <see cref="T:System.Xml.Linq.XName"/> of the expected child element</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="M:FluentAssertions.Xml.XElementAssertions.HaveElement(System.Xml.Linq.XName,System.String,System.Object[])">
-            <summary>
-            Asserts that the current <see cref="T:System.Xml.Linq.XElement"/> has a direct child element with the specified
-            <paramref name="expected"/> name.
-            </summary>
-            <param name="expected">The name <see cref="T:System.Xml.Linq.XName"/> of the expected child element</param>
-            <param name="because">
-            A formatted phrase as is supported by <see cref="M:System.String.Format(System.String,System.Object[])" /> explaining why the assertion 
-            is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-            </param>
-            <param name="reasonArgs">
-            Zero or more objects to format using the placeholders in <see cref="!:because" />.
-            </param>
-        </member>
-        <member name="P:FluentAssertions.Xml.XElementAssertions.Context">
-            <summary>
-            Returns the type of the subject the assertion applies on.
-            </summary>
         </member>
     </members>
 </doc>

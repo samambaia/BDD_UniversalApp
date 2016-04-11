@@ -1,1 +1,0 @@
-D:\Projects\BDD_UniversalApp\BDD_UniversalApp\BDD_UniversalApp.csproj;x64

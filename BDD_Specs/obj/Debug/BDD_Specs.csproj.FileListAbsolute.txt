@@ -5,6 +5,7 @@ D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\BDD_Specs.pdb
 D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\FluentAssertions.Core.dll
 D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\FluentAssertions.dll
 D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\ImpromptuInterface.dll
+D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\nunit.framework.dll
 D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\SpecFlow.Assist.Dynamic.dll
 D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\TechTalk.SpecFlow.dll
@@ -22,4 +23,3 @@ D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\WebDriver.Support.xml
 D:\Projects\BDD_UniversalApp\BDD_Specs\obj\Debug\BDD_Specs.csprojResolveAssemblyReference.cache
 D:\Projects\BDD_UniversalApp\BDD_Specs\obj\Debug\BDD_Specs.dll
 D:\Projects\BDD_UniversalApp\BDD_Specs\obj\Debug\BDD_Specs.pdb
-D:\Projects\BDD_UniversalApp\BDD_Specs\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
