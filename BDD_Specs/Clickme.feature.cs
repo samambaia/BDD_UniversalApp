@@ -73,15 +73,13 @@ namespace BDD_Specs
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given("Que eu abro a aplicação", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+ testRunner.Given("Que estou na tela de \"Main\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line 8
- testRunner.And("Estou na tela de \"Main\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line 9
  testRunner.When("Eu pressiono o botão \"btnClickme\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line 9
+ testRunner.Then("Preencho o campo \"txbName\" com o valor \"Você Clicou em Mim\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
 #line 10
- testRunner.And("Preencho o campo \"txbName\" com o valor \"Você Clicou em Mim\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
-#line 11
- testRunner.Then("o campo \"txbName\" deve ter o valor \"\"Você Clicou em Mim\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Então ");
+ testRunner.And("o campo \"txbName\" deve ter o valor \"\"Você Clicou em Mim\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -8,15 +8,11 @@ namespace BDD_Specs
     [Binding]
     public class ClickmeSteps
     {
-        [Given(@"Que eu abro a aplicação")]
-        public void DadoQueEuAbroAAplicacao()
+        [Given(@"Que estou na tela de ""(.*)""")]
+        public void DadoQueEstouNaTelaDe(string p0)
         {
             PropertiesCollection.CurrentPage = new MainPageObject();
-        }
-        
-        [Given(@"Estou na tela de ""(.*)""")]
-        public void DadoEstouNaTelaDe(string p0)
-        {
+
             if (!DriverMethods.IsInPage(p0))
             {
                 throw new MissingMemberException();
@@ -30,8 +26,8 @@ namespace BDD_Specs
             PropertiesCollection.CurrentPage.Clicar(p0);
         }
 
-        [When(@"Preencho o campo ""(.*)"" com o valor ""(.*)""")]
-        public void QuandoPreenchoOCampoComOValor(string p0, string p1)
+        [Then(@"Preencho o campo ""(.*)"" com o valor ""(.*)""")]
+        public void EntaoPreenchoOCampoComOValor(string p0, string p1)
         {
             DriverMethods.WaitFor(400);
             var elementId = PropertiesCollection.CurrentPage.FindControlId(p0);
@@ -40,6 +36,7 @@ namespace BDD_Specs
             element.SendKeys(p1);
         }
 
+
         [Then(@"o campo ""(.*)"" deve ter o valor """"(.*)""")]
         public void EntaoOCampoDeveTerOValor(string p0, string p1)
         {
@@ -47,10 +44,11 @@ namespace BDD_Specs
             var elementId = PropertiesCollection.CurrentPage.FindControlId(p0);
             var element = PropertiesCollection.Driver.FindElementById(elementId);
             
-            if (element.Text == p1)
+            if (element.Text != p1)
             {
                 throw new FormatException();
             }
         }
     }
 }
+
